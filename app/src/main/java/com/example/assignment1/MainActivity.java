@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         CalculateButton = findViewById(R.id.CalculateButton);
         Result = findViewById(R.id.Result);
 
-        calculateButton.setOnClickListener(v -> {
+        CalculateButton.setOnClickListener(v -> {
             calculateEMI();
         });
     }
