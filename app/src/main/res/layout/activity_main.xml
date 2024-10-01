@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/calculateButton"
+        android:id="@+id/CalculateButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:hint="Calculate EMI"
@@ -21,7 +21,7 @@
         app:layout_constraintVertical_bias="0.626" />
 
     <EditText
-        android:id="@+id/mortgageAmount"
+        android:id="@+id/MortgageAmount"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:ems="10"
@@ -36,7 +36,7 @@
         app:layout_constraintVertical_bias="0.29" />
 
     <EditText
-        android:id="@+id/tenure"
+        android:id="@+id/TenureAmount"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:ems="10"
@@ -50,7 +50,7 @@
         app:layout_constraintVertical_bias="0.396" />
 
     <EditText
-        android:id="@+id/interestRate"
+        android:id="@+id/InterestRate"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:ems="10"
@@ -79,7 +79,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/emiResult"
+        android:id="@+id/Result"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:paddingTop="16dp"
