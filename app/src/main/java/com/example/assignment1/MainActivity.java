@@ -10,11 +10,11 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText mortgageAmount;
-    private EditText tenure;
-    private EditText interestRate;
-    private Button calculateButton;
-    private TextView emiResult;
+    private EditText MortgageAmount;
+    private EditText TenureAmount;
+    private EditText InterestRate;
+    private Button CalculateButton;
+    private TextView Result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,11 +22,11 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        mortgageAmount = findViewById(R.id.mortgageAmount);
-        tenure = findViewById(R.id.tenure);
-        interestRate = findViewById(R.id.interestRate);
-        calculateButton = findViewById(R.id.calculateButton);
-        emiResult = findViewById(R.id.emiResult);
+        MortgageAmount = findViewById(R.id.MortgageAmount);
+        TenureAmount = findViewById(R.id.TenureAmount);
+        InterestRate = findViewById(R.id.InterestRate);
+        CalculateButton = findViewById(R.id.CalculateButton);
+        Result = findViewById(R.id.Result);
 
         calculateButton.setOnClickListener(v -> {
             calculateEMI();
@@ -34,10 +34,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void calculateEMI() {
-        double principal = Double.parseDouble(mortgageAmount.getText().toString());
-        double tenureInYears = Double.parseDouble(tenure.getText().toString());
-        double rateInMonths = Double.parseDouble(interestRate.getText().toString()) / 12 / 100;
-        double emi = principal * (rateInMonths * Math.pow(1 + rateInMonths, tenureInYears * 12)) / (Math.pow(1 + rateInMonths, tenureInYears * 12) - 1);
-        emiResult.setText("Monthly EMI: $" + String.format("%.2f", emi));
+        double principal = Double.parseDouble(MortgageAmount.getText().toString());
+        double tenureInYears = Double.parseDouble(TenureAmount.getText().toString());
+        double rateInMonths = Double.parseDouble(InterestRate.getText().toString()) / 12 / 100;
+        double emi = principal * (rateInMonths * Math.pow(1 + rateInMonths, tenureInMonths * 12)) / (Math.pow(1 + rateInMonths, tenureInMonths * 12) - 1);
+        Result.setText("Monthly EMI: $" + String.format("%.2f", emi));
     }
 }
