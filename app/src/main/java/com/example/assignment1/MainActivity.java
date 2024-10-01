@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void calculateEMI() {
         double principal = Double.parseDouble(MortgageAmount.getText().toString());
-        double tenureInYears = Double.parseDouble(TenureAmount.getText().toString());
+        double tenureInMonths = Double.parseDouble(TenureAmount.getText().toString());
         double rateInMonths = Double.parseDouble(InterestRate.getText().toString()) / 12 / 100;
         double emi = principal * (rateInMonths * Math.pow(1 + rateInMonths, tenureInMonths * 12)) / (Math.pow(1 + rateInMonths, tenureInMonths * 12) - 1);
         Result.setText("Monthly EMI: $" + String.format("%.2f", emi));
